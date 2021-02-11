@@ -2,7 +2,7 @@
 #X obj 368 674 cnv 15 203 85 empty empty empty 20 12 0 14 -261294 -66577
 0;
 #X obj 636 333 hsl 140 52 0 1 0 1 null startViewer empty -2 -8 0 10
--262144 -1 -1 993 1;
+-262144 -1 -1 0 1;
 #X obj 838 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 838 115 openpanel;
@@ -3230,7 +3230,7 @@
 #X restore 636 333 graph;
 #X obj 631 115 samplerate~;
 #X obj 631 144 / 1000;
-#X obj 353 157 tgl 15 0 empty empty empty 17 7 0 10 -258625 -1 -1 0
+#X obj 353 157 tgl 15 0 empty empty empty 17 7 0 10 -258625 -1 -1 1
 1;
 #X floatatom 450 117 5 0 0 0 - - -, f 5;
 #X msg 292 732 next \$1;
@@ -3247,12 +3247,12 @@
 #X floatatom 630 898 4 0 12000 0 - - -, f 4;
 #X floatatom 665 922 0 0 120 0 - - -;
 #X obj 372 658 hradio 12 0 1 16 empty empty empty 0 -8 0 10 -262144
--1 -1 7;
+-1 -1 12;
 #X obj 71 846 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 71 938 *~;
 #X obj 89 917 hsl 74 13 0 1 0 1 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 292 823 *~;
 #X obj 310 795 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
 -1 -1 12700 1;
@@ -6204,7 +6204,7 @@
 0 0 -1.19209e-07 0 -1.19209e-07 -3.57628e-07 2.38419e-07 -1.19209e-07
 0 1.19209e-07 0 0 0 0 0 0 0 2.38419e-07 0 0 2.38419e-07 -1.19209e-07
 0 0 0 -2.38419e-07 0 2.38419e-07 1.19209e-07 0 0 -1.19209e-07 2.38419e-07
-0 0 -1.19209e-07 0 0 0 0 0 0 0 0 2.38419e-07 1.19209e-07 ;
+0 0 -1.19209e-07 0 0 0 0 0 0 0 0 2.38419e-07 1.19209e-07;
 #X coords 0 1 21338 -1 145 52 1;
 #X restore 792 333 graph;
 #X obj 71 865 tabplay~ kick;
@@ -6332,7 +6332,7 @@
 #X obj 292 1053 *~;
 #X obj 317 1053 *~;
 #X obj 249 942 vsl 15 55 0 1 0 1 empty empty empty 0 -9 0 10 -262144
--258625 -1 0 1;
+-258625 -1 1600 1;
 #X text 445 706 View each voice \, no longer in use, f 16;
 #X text 591 848 level;
 #N canvas 1692 133 758 456 tablesTicks 0;
@@ -6389,7 +6389,7 @@
 #X restore 581 1047 graph;
 #X obj 442 1085 tabwrite~ \$0-scope;
 #X obj 442 1032 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 442 1056 metro 60;
 #X obj 369 962 hsl 54 9 0 1 0 1 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -6397,17 +6397,17 @@
 #X obj 424 992 *~;
 #X obj 299 659 s counter;
 #X obj 1262 365 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 1262 194 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 1262 535 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 1262 705 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 1262 875 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 1262 1045 hradio 13 0 1 16 empty counter empty 0 -8 0 10 -261294
--258625 -1 7;
+-258625 -1 12;
 #X obj 470 277 s ms;
 #X obj 386 72 r run;
 #X obj 124 151 r fromPhone;
@@ -6667,9 +6667,9 @@ rmspeak 0 \, lookahead 10;
 #X obj 391 607 mod 16;
 #X obj 181 779 mod 4;
 #X obj 528 949 rev2~ 95 80 1000 100;
-#X obj 89 896 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 89 896 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 292 1092 dac~ 5 6;
+#X obj 292 1092 dac~;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
